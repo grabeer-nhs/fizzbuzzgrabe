@@ -23,7 +23,7 @@ jobs:
           node-version: '20'
 
       - name: Install pyret package
-        run: npm install --no-save pyret-lang
+        run: npm install --no-save pyret-npm
 
       - name: Validate Pyret source file exists
         run: test -f count-from-1-to-100.arr
