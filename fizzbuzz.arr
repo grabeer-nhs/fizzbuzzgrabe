@@ -13,20 +13,7 @@ fun fizzbuzz(n :: Number) -> String:
 end
 
 each(lam(n): print(fizzbuzz(n)) end, range(1, 101))
-
-fun numbers-from-to(start :: Number, finish :: Number) -> List<Number>:
-  if start > finish:
-    empty
-  else:
-    link(start, numbers-from-to(start + 1, finish))
-  end
-end
-
-fun numbers-to-100() -> List<Number>:
-  numbers-from-to(1, 100)
-end
-
-each(lam(n): print(n) end, numbers-to-100())
+each(lam(n): print(n) end, range(1, 101))
 
 check "fizzbuzz":
   fizzbuzz(1)  is "1"
@@ -37,9 +24,4 @@ check "fizzbuzz":
   fizzbuzz(9)  is "Fizz"
   fizzbuzz(10) is "Buzz"
   fizzbuzz(100) is "Buzz"
-end
-
-check "numbers-to-100":
-  numbers-from-to(3, 5) is [list: 3, 4, 5]
-  numbers-to-100() is range(1, 101)
 end
