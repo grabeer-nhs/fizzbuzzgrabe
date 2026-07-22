@@ -13,7 +13,11 @@ fun fizzbuzz(n :: Number) -> String:
 end
 
 each(lam(n): print(fizzbuzz(n)) end, range(1, 101))
-each(lam(n): print(n) end, range(1, 101))
+
+fun count-to-100() -> Nothing:
+  each(lam(n): print(n) end, range(1, 101))
+  nothing
+end
 
 check "fizzbuzz":
   fizzbuzz(1)  is "1"
