@@ -5,6 +5,8 @@ fun count-up(n):
     block:
       if num-modulo(n, 3) == 0:
         print("fizz")
+      else if num-modulo(n, 5) == 0:
+        print("buzz")
       else:
         print(n)
       end
